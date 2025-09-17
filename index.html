@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>The Golden Loaf Bakery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #fdfaf6;
+      --ink: #3a2e28;
+      --panel: #ffffff;
+      --accent: #e49c4a;
+      --accent-soft: #f9f0e5;
+      --muted: #8a7d75;
+      --serif: "Playfair Display", serif;
+      --sans-serif: "Roboto", sans-serif;
+      --radius: 8px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{background:var(--bg);color:var(--ink);font:16px/1.7 var(--sans-serif);-webkit-font-smoothing:antialiased;}
+    .wrap{max-width:1100px;margin:0 auto;padding:0 1.5rem;}
+    
+    header{background:var(--panel);border-bottom:1px solid var(--accent-soft);}
+    .header-row{display:flex;align-items:center;justify-content:space-between;min-height:70px;}
+    .brand{font-family:var(--serif);font-size:1.5rem;font-weight:700;color:var(--ink);}
+    .top-nav a{color:var(--muted);text-decoration:none;padding:0.5rem 1rem;font-weight:500;}
+    .top-nav a.active, .top-nav a:hover{color:var(--accent);}
+
+    .hero{
+      background-color: var(--accent-soft);
+      text-align:center;
+      padding: 5rem 1.5rem;
+      background-image: linear-gradient(rgba(42, 34, 30, 0.5), rgba(42, 34, 30, 0.5)), url('images/background.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+    .hero h1{font-family:var(--serif);font-size:clamp(2.5rem, 5vw, 4rem);line-height:1.1;margin-bottom:1rem; color: #fff;}
+    .hero p{font-size:1.1rem;color:rgba(255,255,255,.9);max-width:60ch;margin:0 auto;}
+    
+    .features{padding: 4rem 0;}
+    .features-grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:2rem;}
+    .feature-card{background:var(--panel);border:1px solid var(--accent-soft);border-radius:var(--radius);padding:2rem;text-align:center;}
+    .feature-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: var(--radius);
+      margin-bottom: 1.5rem;
+    }
+    .feature-card h2{font-family:var(--serif);font-size:1.5rem;margin-bottom:0.5rem;}
+    .feature-card p{color:var(--muted);line-height:1.6;}
+
+    footer{background:var(--ink);color:var(--bg);text-align:center;padding:2rem 0;margin-top:2rem;}
+
+    @media(max-width: 600px){.top-nav{display:none;}}
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="wrap header-row">
+      <div class="brand">The Golden Loaf</div>
+      <nav class="top-nav">
+        <a href="#" class="active">Home</a>
+        <a href="#">Our Story</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <h1>Tradition, Baked Fresh Daily.</h1>
+        <p>Welcome to The Golden Loaf, where the simple joy of baking is our daily passion. We believe in time-honored recipes and the finest local ingredients to create breads, pastries, and cakes that don't just feed the body, but nourish the soul. We're more than a bakery; we're a cornerstone of the community—a place to pause, connect, and savor the simple, delicious moments of life.</p>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="wrap">
+        <div class="features-grid">
+          <div class="feature-card">
+            <img src="images/loaf.jpg" alt="A rustic loaf of sourdough bread">
+            <h2>The Perfect Loaf</h2>
+            <p>Our signature. Each loaf of our artisanal sourdough is slow-fermented for over 24 hours, creating a deep, tangy flavor and a perfect, crackling crust. This is bread the way it was meant to be.</p>
+          </div>
+          <div class="feature-card">
+            <img src="images/pastry.jpg" alt="A flaky, butter-rich croissant">
+            <h2>A Sweeter Start</h2>
+            <p>Begin your day with a touch of indulgence. From our flaky, butter-rich croissants to our decadent cinnamon swirls, every pastry is handcrafted in small batches to ensure peak freshness and flavor.</p>
+          </div>
+          <div class="feature-card">
+            <img src="images/cake.jpg" alt="An elegant celebration cake">
+            <h2>Moments Made Memorable</h2>
+            <p>For life's special occasions, let us create something unforgettable. Our custom-made cakes blend elegant design with exquisite flavors like rich chocolate velvet and zesty lemon curd.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>© 2025 The Golden Loaf Bakery • Handcrafted with Love</p>
+    </div>
+  </footer>
+
+</body>
+</html>
